@@ -1,0 +1,58 @@
+{
+  "name": "firebase-jwt-token",
+  "version": "1.0.0",
+  "description": "Quickly get a Firebase Auth token using Email/Password",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "build": "tsc",
+    "refresh": "rm -rf ./node_modules ./lib ./package-lock.json && npm install && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathansudhakar1/firebase-jwt-token.git"
+  },
+  "keywords": [
+    "Firebase",
+    "Token",
+    "Generate",
+    "Auth",
+    "Authentocator",
+    "Email",
+    "Password",
+    "CLI",
+    "JWT",
+    "Authorization",
+    "Bearer",
+    "Test"
+  ],
+  "author": "Jonathan Sudhakar",
+  "license": "ISC",
+  "bin": "./lib/cli.js",
+  "bugs": {
+    "url": "https://github.com/jonathansudhakar1/firebase-jwt-token/issues"
+  },
+  "homepage": "https://github.com/jonathansudhakar1/firebase-jwt-token#readme",
+  "dependencies": {
+    "firebase": "^7.14.2",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "npm": "^6.14.4",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/jsonwebtoken": "^8.3.9",
+    "@types/yargs": "^15.0.4",
+    "jest": "^25.5.3",
+    "prettier": "^2.0.5",
+    "ts-jest": "^25.4.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+  "lint": "tslint -p tsconfig.json"
+}
