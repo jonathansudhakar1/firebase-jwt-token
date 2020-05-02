@@ -4,8 +4,8 @@ import * as jsonwebtoken from "jsonwebtoken";
 export class FirebaseJWTToken {
   app: firebase.app.App;
 
-  constructor(authDomain: string, apiKey: string) {
-    this.app = firebase.initializeApp({ authDomain, apiKey });
+  constructor(apiKey: string) {
+    this.app = firebase.initializeApp({ apiKey });
   }
 
   async getToken(email: string, password: string, decode = false) {
