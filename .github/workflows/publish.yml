@@ -46,7 +46,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/jonathansudhakar1
+          registry-url: https://npm.pkg.github.com
           scope: '@jonathansudhakar1'
       - run: npm ci
       - run: npm run build --if-present
