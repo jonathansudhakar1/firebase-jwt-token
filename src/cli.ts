@@ -11,31 +11,31 @@ const args = yargs.options({
   },
   email: {
     type: "string",
-    required: true,
     alias: "e",
-    description: "User's Email to log in with",
+    default: process.env.FJT_EMAIL,
+    required: true,
+    description:
+      "User's Email to log in with. Optionally use environment variable FJT_EMAIL",
   },
   password: {
     type: "string",
-    required: true,
     alias: "p",
-    description: "User's Password to log in with",
-  },
-  domain: {
-    type: "string",
+    default: process.env.FJT_PASSWORD,
     required: true,
-    alias: "a",
-    description: "authDomain from the Firebase config object",
+    description:
+      "User's Password to log in with. Optionally use environment variable FJT_PASSWORD",
   },
   key: {
     type: "string",
-    required: true,
     alias: "k",
-    description: "apiKey from the Firebase config object",
+    default: process.env.FJT_KEY,
+    required: true,
+    description:
+      "Firebase Project's Web API Key (can be found under project settings). Optionally use environment variable FJT_KEY",
   },
 }).argv;
 
-const app = new FirebaseJWTToken(args.domain, args.key);
+const app = new FirebaseJWTToken(args.key as string);
 app
-  .getToken(args.email, args.password, args.decode)
+  .getToken(args.email as string, args.password as string, args.decode)
   .then((token) => console.log(token));
