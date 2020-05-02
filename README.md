@@ -20,8 +20,11 @@ Options:
   --help          Show help                                            [boolean]
   --version       Show version number                                  [boolean]
   --decode, -d    Return decoded token as json instead of JWT Token    [boolean]
-  --email, -e     User's Email to log in with                [string] [required]
-  --password, -p  User's Password to log in with             [string] [required]
-  --domain, -a    authDomain from the Firebase config object [string] [required]
-  --key, -k       apiKey from the Firebase config object     [string] [required]
+  --email, -e     Email to log in with. Optionally use environment
+                  variable FJT_EMAIL                         [string] [required]
+  --password, -p  Password to log in with. Optionally use environment
+                  variable FJT_PASSWORD                      [string] [required]
+  --key, -k       Firebase Project Web API Key (can be found under project
+                  settings). Optionally use environment variable FJT_KEY
+                                                             [string] [required]
 ```
