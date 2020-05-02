@@ -47,7 +47,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/jonathansudhakar1
-          scope: @jonathansudhakar1
+          scope: '@jonathansudhakar1'
       - run: npm ci
       - run: npm run build --if-present
       - run: npm publish
