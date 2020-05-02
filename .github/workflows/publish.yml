@@ -32,6 +32,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: sed -i -- 's/@jonathansudhakar1\/firebase-jwt-token/firebase-jwt-token/g' package.json 
       - run: npm ci
       - run: npm run build --if-present
       - run: npm publish
