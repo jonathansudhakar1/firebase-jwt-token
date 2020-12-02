@@ -1,6 +1,6 @@
 {
   "name": "@jonathansudhakar1/firebase-jwt-token",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Quickly get a Firebase Auth token using Email/Password",
   "main": "./lib/index.js",
   "scripts": {
